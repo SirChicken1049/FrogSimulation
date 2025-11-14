@@ -8,10 +8,14 @@ public class FrogSimulation {
     }
 
     private int hopDistance() {
-        return Math.abs(goalDistance / maxHops)
+        int m = (int) ((Math.random() * maxHops) + 0.5);
+        return m;
     }
 
     public boolean simulate() {
+    }
+
+    public double runSimulations(int num) {
 
     }
 }
