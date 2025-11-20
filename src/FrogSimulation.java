@@ -12,10 +12,10 @@ public class FrogSimulation {
         int check = 0;
         for (int i = 0; i <= (Math.random() * maxHops); i++){
             check =(int) (Math.random() * 32) - 8;
-            System.out.println(check);
+            //System.out.println(check);
             total += check;
         }
-        System.out.println(total);
+        //System.out.println(total);
         return total;
     }
 
@@ -26,7 +26,14 @@ public class FrogSimulation {
         return false;
     }
 
-    //public double runSimulations(int num) {
-
-    //}
+    public double runSimulations(int num) {
+        int goalAchieved = 0;
+        for (int i = 0; i <= num; i++) {
+            boolean check2 =simulate();
+            if (check2 == true) {
+                goalAchieved += 1;
+            }
+        }
+        return (double)(goalAchieved / num);
+    }
 }
