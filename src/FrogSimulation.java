@@ -8,14 +8,25 @@ public class FrogSimulation {
     }
 
     private int hopDistance() {
-        int m = (int) ((Math.random() * maxHops) + 0.5);
-        return m;
+        int total = 0;
+        int check = 0;
+        for (int i = 0; i <= (Math.random() * maxHops); i++){
+            check =(int) (Math.random() * 32) - 8;
+            System.out.println(check);
+            total += check;
+        }
+        System.out.println(total);
+        return total;
     }
 
     public boolean simulate() {
+        if (hopDistance() >= goalDistance) {
+            return true;
+        }
+        return false;
     }
 
-    public double runSimulations(int num) {
+    //public double runSimulations(int num) {
 
-    }
+    //}
 }
