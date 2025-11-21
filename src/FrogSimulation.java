@@ -15,7 +15,7 @@ public class FrogSimulation {
             //System.out.println(check);
             total += check;
         }
-        //System.out.println(total);
+        System.out.println(total);
         return total;
     }
 
@@ -29,11 +29,11 @@ public class FrogSimulation {
     public double runSimulations(int num) {
         int goalAchieved = 0;
         for (int i = 0; i <= num; i++) {
-            boolean check2 =simulate();
+            boolean check2 = simulate();
             if (check2 == true) {
                 goalAchieved += 1;
             }
         }
-        return (double)(goalAchieved / num);
+        return (goalAchieved / (double)num);
     }
 }
